@@ -14,10 +14,10 @@ public class Bioskop07 {
         penonton[3][0] = "Gisel";
         penonton[3][1] = "Hana";
 
-        // Menampilkan penonton baris ke-3 dengan foreach
-        System.out.println("\nPenonton baris ke-3 (foreach):");
-        for (String nama : penonton[2]) {
-            System.out.println(nama);
+        // Menampilkan semua nama penonton setiap baris
+        System.out.println("\nDaftar penonton tiap baris:");
+        for (int i = 0; i < penonton.length; i++) {
+            System.out.println("Baris ke-" + (i + 1) + ": " + String.join(", ", penonton[i]));
         }
     }
 }
