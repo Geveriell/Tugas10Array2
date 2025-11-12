@@ -22,11 +22,10 @@ public class Bioskop07 {
             System.out.println();
         }
 
-        // Menampilkan panjang array
-        System.out.println("\nJumlah baris: " + penonton.length);
-        System.out.println("Jumlah kolom baris ke-0: " + penonton[0].length);
-        System.out.println("Jumlah kolom baris ke-1: " + penonton[1].length);
-        System.out.println("Jumlah kolom baris ke-2: " + penonton[2].length);
-        System.out.println("Jumlah kolom baris ke-3: " + penonton[3].length);
+        // Menampilkan panjang setiap baris menggunakan for loop
+        System.out.println("\nPanjang setiap baris:");
+        for (int i = 0; i < penonton.length; i++) {
+            System.out.println("Baris ke-" + (i + 1) + " memiliki " + penonton[i].length + " kolom.");
+        }
     }
 }
