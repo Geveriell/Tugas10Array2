@@ -14,18 +14,10 @@ public class Bioskop07 {
         penonton[3][0] = "Gisel";
         penonton[3][1] = "Hana";
 
-        // array for loop
-        for (int i = 0; i < penonton.length; i++) {
-            for (int j = 0; j < penonton[i].length; j++) {
-                System.out.print(penonton[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        // Menampilkan panjang setiap baris menggunakan for loop
-        System.out.println("\nPanjang setiap baris:");
-        for (int i = 0; i < penonton.length; i++) {
-            System.out.println("Baris ke-" + (i + 1) + " memiliki " + penonton[i].length + " kolom.");
+        // Menampilkan panjang setiap baris menggunakan foreach
+        System.out.println("\nPanjang setiap baris (foreach):");
+        for (String[] baris : penonton) {
+            System.out.println("Panjang baris: " + baris.length);
         }
     }
 }
