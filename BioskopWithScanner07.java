@@ -7,12 +7,13 @@ public class BioskopWithScanner07 {
         int menu;
 
         do {
+            System.out.println("\n=== MENU BIOSKOP ===");
             System.out.println("1. Input Data Penonton");
             System.out.println("2. Tampilkan Daftar Penonton");
             System.out.println("3. Exit");
             System.out.print("Pilih menu: ");
             menu = sc.nextInt();
-            sc.nextLine(); // bersihkan buffer
+            sc.nextLine();
 
             switch (menu) {
                 case 1:
@@ -23,7 +24,12 @@ public class BioskopWithScanner07 {
                     System.out.print("Masukkan kolom (1-2): ");
                     int kolom = sc.nextInt();
                     sc.nextLine();
-                    penonton[baris - 1][kolom - 1] = nama;
+
+                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
+                        System.out.println("Nomor kursi tidak tersedia!");
+                    } else {
+                        penonton[baris - 1][kolom - 1] = nama;
+                    }
                     break;
 
                 case 2:
